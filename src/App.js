@@ -8,13 +8,14 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Views/Home';
 import About from './Views/About';
-import Contact from './Views/Contact'
+import Contact from './Views/Contact';
+import Product from './Views/Product'
 
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="relative pb-10 min-h-screen">
       
       <Router>
         <Header/>
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path ='/contact'>
               <Contact/>
+            </Route>
+            <Route path ='/products/:id'>
+              <Product/>
             </Route>
           </Switch>
         </div>
