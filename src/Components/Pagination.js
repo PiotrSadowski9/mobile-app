@@ -7,13 +7,13 @@ export default function Pagination({postPerPage,totalPosts, paginate}) {
     }
     return (
         
-       <nav className="block">
-           <ul className="flex list-reset border border-grey-light rounded w-auto font-sans">
+       <nav className="flex justify-center">
+           <ul className="flex list-reset  w-auto">
                {pageNumbers.map(number => (
                    <li key={number}>
                        <a 
                        onClick={() => paginate(number)}
-                       className="block hover:text-white hover:bg-blue-700 text-blue border-r border-grey-light px-3 py-2">
+                       className="block hover:text-white hover:bg-blue-500 hover:border-blue-500 text-blue border border-grey-light px-3 py-2">
                        {number}</a>
                    </li>
                ))}
