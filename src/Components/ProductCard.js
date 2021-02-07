@@ -20,7 +20,7 @@ export default function ProductCard(props) {
                     {props.product.description}
                 </div>
                 <Link to={`/products/${props.product.id}`} className={'bg-blue-500 text-white p-2 flex justify-center'}>
-                    View
+                    View more
                 </Link>
             </div>
         </div>
