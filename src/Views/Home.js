@@ -6,9 +6,7 @@ import Pagination from '../Components/Pagination'
 
 export default function Home() {
     
-    // const [page, setPage] = useState(1);
-    
-    // const url = `https://601bd2cf1a9c22001705fb28.mockapi.io/api/v1/products?page=${page}&limit=10`;
+
 
     const url = `https://601bd2cf1a9c22001705fb28.mockapi.io/api/v1/products`;
     const [postsPerPage] = useState(10); 

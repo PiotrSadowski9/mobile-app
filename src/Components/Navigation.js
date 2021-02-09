@@ -23,7 +23,7 @@ export default function Navigation() {
     
     return (
         <nav>
-            <span className={'text-xl fixed top-2 right-2'}>
+            <span className={'text-xl'}>
                 <FontAwesomeIcon 
                     icon={faBars}
                     onClick={() => setShowMenu(!showMenu)}

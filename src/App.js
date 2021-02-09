@@ -19,7 +19,7 @@ function App() {
       
       <Router>
         <Header/>
-        <div className={'p-3'}>
+        <div className={'p-3 mt-12'}>
           <Switch>
             <Route exact path='/'>
               <Home/>
