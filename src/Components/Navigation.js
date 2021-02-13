@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
+import {faBars,faUser} from '@fortawesome/free-solid-svg-icons';
 import {useTransition, animated} from 'react-spring';
 import NavigationMenu from './NavigationMenu';
-import Login from './Login'
+import {Link} from "react-router-dom";
+
 
 
 
@@ -25,7 +26,13 @@ export default function Navigation() {
     return (
         <nav>
             <span className={'text-xl'}>
-                <Login/>
+                
+                
+                <Link to ='/login'>
+                    <FontAwesomeIcon
+                        icon={faUser}
+                        className={'mr-10'}/>
+                </Link>
                 <FontAwesomeIcon 
                     icon={faBars}
                     onClick={() => setShowMenu(!showMenu)}

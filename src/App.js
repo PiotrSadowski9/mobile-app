@@ -9,7 +9,8 @@ import Footer from './Components/Footer';
 import Home from './Views/Home';
 import About from './Views/About';
 import Contact from './Views/Contact';
-import Product from './Views/Product'
+import Product from './Views/Product';
+import Login from './Views/Login'
 
 
 
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route path ='/products/:id'>
               <Product/>
+            </Route>
+            <Route path = '/login'>
+              <Login/>
             </Route>
           </Switch>
         </div>
