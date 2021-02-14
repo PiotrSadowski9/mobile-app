@@ -9,12 +9,14 @@ export default function Login({user,setUser}) {
         e.preventDefault();
         
         
-     if(user.name == details.name && user.password == details.password){
+     if(user.name == details.name && user.password == details.password && user.name && user.password){
          console.log(user)
          setUser({...user,logged:true})
-        
-
-     }
+        } else {
+            setUser({...user,logged:false})
+            console.log("Incorrect Login or password")
+        }
+     
     
     }
    
