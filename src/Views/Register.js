@@ -1,36 +1,29 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React from 'react'
 
-
-export default function Login() {
+export default function Register() {
     return (
-        <div>
-                    <div className="mb-4 p-5">
+        <div className={'flex flex-col p-10'}>
+                    <div className="mb-4">
                             <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="username">
                                 Username
                             </label>
                             <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="username" type="text" placeholder="Username"/>
                     </div>
+                    <div className="mb-4">
+                            <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="email">
+                                Email
+                            </label>
+                            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="text" placeholder="Email"/>
+                    </div>
                     
-                    <div className="mb-6 p-5">
+                    <div className="mb-6">
                         <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="password">
                             Password
                         </label>
                         <input className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************"/>
                         <button className="bg-black border-2 border-black text-white font-bold py-2 px-4 mt-5 rounded w-full" type="button">
-                            Sign In
+                            Register
                         </button>
-                    </div>
-                    <div className={'bg-gray-200 w-full p-5 flex flex-col p-10 justify-center content-between'}>
-                        
-                        <p className={'underline'}>Are you here for the first time?</p>
-                        <Link to ='/register'>
-                            <button className="bg-gray-200 border-2 border-black text-black font-bold py-2 px-4 rounded w-full" type="button">
-                                Register
-                            </button>
-                        </Link>
-                        
-                        
                     </div>
             </div>
     )

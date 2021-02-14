@@ -10,17 +10,29 @@ import Home from './Views/Home';
 import About from './Views/About';
 import Contact from './Views/Contact';
 import Product from './Views/Product';
-import Login from './Views/Login'
+import Login from './Views/Login';
+import Register from './Views/Register'
+import React, {useState} from 'react';
 
 
 
 function App() {
+
+  const adminUser = {
+    email: "admin@admin.com",
+    password: "admin123"
+  }
+
+  const [user, setUser] = useState({name:'aaa',email:''});
+  const [error, setError] = useState('');
+  const LoginOne = details => {console.log(details)};
+  const Logout = () => {console.log('Logout')}
   return (
     <div className="relative pb-10 min-h-screen">
       
       <Router>
-        <Header/>
-        <div className={'p-3 mt-12'}>
+        <Header user={user.name}/>
+        <div className={'mt-14'}>
           <Switch>
             <Route exact path='/'>
               <Home/>
@@ -36,6 +48,9 @@ function App() {
             </Route>
             <Route path = '/login'>
               <Login/>
+            </Route>
+            <Route path = '/register'>
+              <Register/>
             </Route>
           </Switch>
         </div>

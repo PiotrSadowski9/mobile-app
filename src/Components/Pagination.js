@@ -14,11 +14,12 @@ export default function Pagination({postPerPage,totalPosts, paginate}) {
                {pageNumbers.map(number => (
                    <li key={number}
                    onClick={() => window.scrollTo(0,0)}>
-                       <a 
+                       <div 
                        onClick={() => paginate(number)}
                        
+                       
                        className="block hover:text-white hover:bg-blue-500 hover:border-blue-500 text-blue border border-grey-light px-3 py-2">
-                       {number}</a>
+                       {number}</div>
                    </li>
                ))}
            </ul>

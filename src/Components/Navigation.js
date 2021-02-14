@@ -8,7 +8,9 @@ import {Link} from "react-router-dom";
 
 
 
-export default function Navigation() {
+export default function Navigation(props) {
+   
+    
     const [showMenu, setShowMenu] = useState(false);
     
     const maskTransitions = useTransition(showMenu, null, {
@@ -20,7 +22,19 @@ export default function Navigation() {
         from: { opacity: 0, transform: 'translateX(-100%)' },
         enter: { opacity: 1, transform: 'translateX(0%)' },
         leave: { opacity: 0, transform: 'translateX(-100%)' },
-        })    
+        })
+    let loginIcon;
+    if(props.user){
+        loginIcon = <FontAwesomeIcon
+        icon={faUser}
+        className={'mr-10 text-green-600'}/>
+    }
+    if(!props.user){
+        loginIcon = <FontAwesomeIcon
+                        icon={faUser}
+                        className={'mr-10 text-red-600'}/>
+    }
+    
    
     
     return (
@@ -29,9 +43,7 @@ export default function Navigation() {
                 
                 
                 <Link to ='/login'>
-                    <FontAwesomeIcon
-                        icon={faUser}
-                        className={'mr-10'}/>
+                    {loginIcon}
                 </Link>
                 <FontAwesomeIcon 
                     icon={faBars}
