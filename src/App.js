@@ -23,7 +23,7 @@ function App() {
     password: "admin123"
   }
 
-  const [user, setUser] = useState({name:'aaa',email:''});
+  const [user, setUser] = useState({name:'',email:''});
   const [error, setError] = useState('');
   const LoginOne = details => {console.log(details)};
   const Logout = () => {console.log('Logout')}
@@ -47,10 +47,10 @@ function App() {
               <Product/>
             </Route>
             <Route path = '/login'>
-              <Login/>
+              <Login />
             </Route>
             <Route path = '/register'>
-              <Register/>
+              <Register Login={LoginOne} error={error}/>
             </Route>
           </Switch>
         </div>
