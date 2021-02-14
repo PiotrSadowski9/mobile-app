@@ -1,12 +1,20 @@
 import React, {useState} from 'react';
+// import {Link} from "react-router-dom";
 
-export default function Register({Login, error}) {
+
+export default function Register({Login, setLogin}) {
     const [details, setDetails] = useState({name:'', email:'', password:''});
     const submitHandler = e => {
         e.preventDefault();
-        Login(details)
+        setLogin({...Login, name: details.name,email:details.email,password:details.password});
+        console.log(Login)
+    
+        
+    
     }
+    
     return (
+        <>
         <form className={'flex flex-col p-10'}
               onSubmit={submitHandler} >
                     <div className="mb-4">
@@ -45,13 +53,20 @@ export default function Register({Login, error}) {
                                placeholder="******************"
                                onChange={e => setDetails({...details, password: e.target.value})}
                                value={details.password}
+                               
                                />
-                       <input className="bg-black border-2 border-black text-white font-bold py-2 px-4 mt-5 rounded w-full"
+                       
+                        
+                        <input className="bg-black border-2 border-black text-white font-bold py-2 px-4 mt-5 rounded w-full"
                                type="submit"
                                value="Register"
                             
                         />
+                        
                     </div>
             </form>
+            
+            
+            </>
     )
 }

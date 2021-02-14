@@ -1,11 +1,25 @@
+import userEvent from '@testing-library/user-event';
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
 
-export default function Login() {
+export default function Login({user,setUser}) {
+    const [details, setDetails] = useState({name:'', email:'', password:''});
+    const submitHandler = e => {
+        e.preventDefault();
+        
+        
+     if(user.name == details.name && user.password == details.password){
+         console.log(user)
+         setUser({...user,logged:true})
+        
+
+     }
+    
+    }
    
     return (
-        <form >
+        <form onSubmit={submitHandler}>
                     <div className="mb-4 p-5">
                             <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="username">
                                 Username
@@ -15,6 +29,8 @@ export default function Login() {
                                    name='name' 
                                    type="text" 
                                    placeholder="Username"
+                                   onChange={e => setDetails({...details, name: e.target.value})}
+                                    value={details.name}
                                    
                                    />
                     </div>
@@ -28,6 +44,8 @@ export default function Login() {
                                id="password" 
                                type="password" 
                                placeholder="******************"
+                               onChange={e => setDetails({...details, password: e.target.value})}
+                               value={details.password}
                                
                                />
                         <input className="bg-black border-2 border-black text-white font-bold py-2 px-4 mt-5 rounded w-full"

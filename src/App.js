@@ -18,20 +18,20 @@ import React, {useState} from 'react';
 
 function App() {
 
-  const adminUser = {
-    email: "admin@admin.com",
-    password: "admin123"
-  }
+  
 
-  const [user, setUser] = useState({name:'',email:''});
+  const [user, setUser] = useState({name:'',email:'',password:'',logged:false});
   const [error, setError] = useState('');
   const LoginOne = details => {console.log(details)};
-  const Logout = () => {console.log('Logout')}
+  const Logout = () => {
+    console.log('Logout');
+
+  }
   return (
     <div className="relative pb-10 min-h-screen">
       
       <Router>
-        <Header user={user.name}/>
+        <Header user={user.logged}/>
         <div className={'mt-14'}>
           <Switch>
             <Route exact path='/'>
@@ -47,10 +47,10 @@ function App() {
               <Product/>
             </Route>
             <Route path = '/login'>
-              <Login />
+              <Login user={user} setUser={setUser} />
             </Route>
             <Route path = '/register'>
-              <Register Login={LoginOne} error={error}/>
+              <Register Login={user} setLogin={setUser}/>
             </Route>
           </Switch>
         </div>
