@@ -1,9 +1,11 @@
 import userEvent from '@testing-library/user-event';
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
+import Loader from '../Components/Loader'
 
 
 export default function Login({user,setUser}) {
+    let loading;
     const [details, setDetails] = useState({name:'', email:'', password:''});
     const submitHandler = e => {
         e.preventDefault();
@@ -12,6 +14,7 @@ export default function Login({user,setUser}) {
      if(user.name == details.name && user.password == details.password && user.name && user.password){
          console.log(user)
          setUser({...user,logged:true})
+         loading = <Loader/>
         } else {
             setUser({...user,logged:false})
             console.log("Incorrect Login or password")
@@ -21,6 +24,7 @@ export default function Login({user,setUser}) {
     }
    
     return (
+        <>
         <form onSubmit={submitHandler}>
                     <div className="mb-4 p-5">
                             <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="username">
@@ -56,6 +60,8 @@ export default function Login({user,setUser}) {
                             
                         />
                     </div>
+                    {loading}
+                    
                     <div className={'bg-gray-200 w-full p-5 flex flex-col p-10 justify-center content-between'}>
                         
                         <p className={'underline'}>Are you here for the first time?</p>
@@ -69,5 +75,7 @@ export default function Login({user,setUser}) {
                         
                     </div>
             </form>
+            
+            </>
     )
 }
