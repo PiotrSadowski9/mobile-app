@@ -21,12 +21,8 @@ function App() {
   
 
   const [user, setUser] = useState({name:'',email:'',password:'',logged:false});
-  const [error, setError] = useState('');
-  const LoginOne = details => {console.log(details)};
-  const Logout = () => {
-    console.log('Logout');
+  
 
-  }
   return (
     <div className="relative pb-10 min-h-screen">
       
