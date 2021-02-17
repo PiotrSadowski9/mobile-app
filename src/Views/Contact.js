@@ -1,21 +1,38 @@
-import React from 'react'
+import React,{useState} from 'react';
+import Loader from "../Components/Loader"
 
 export default function Contact() {
-    return (
-        <form className="w-full">
+  const [details, setDetails] = useState({firstName:'',lastName:'', email:'', message:''});
+  let content;
+  const submitHandler = e => {
+    e.preventDefault();
+    console.log(details);
+    content = <Loader/>
+    
+    setTimeout(() => {
+      alert("Thanks for your message!")
+    }, 3000);
+ }
+  content = <form className="w-full h-screen" onSubmit={submitHandler}>
   <div className="flex flex-wrap">
-    <div className="w-full">
+    <div className="w-full px-3">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
         First Name
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane"/>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" 
+             id="FirstName" 
+             type="text"
+             onChange={e => setDetails({...details, firstName: e.target.value})} />
       
     </div>
-    <div className="w-full ">
+    <div className="w-full px-3">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
         Last Name
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"/>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" 
+             id="LastName" 
+             type="text"
+             onChange={e => setDetails({...details, lastName: e.target.value})} />
     </div>
   </div>
   <div className="flex flex-wrap ">
@@ -23,27 +40,40 @@ export default function Contact() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
         E-mail
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email"/>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" 
+             id="Email" 
+             type="email"
+             onChange={e => setDetails({...details, email: e.target.value})}
+             />
       
     </div>
   </div>
   <div className="flex flex-wrap ">
     <div className="w-full px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
         Message
       </label>
-      <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
+      <textarea className=" no-resize shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" 
+                id="Message"
+                onChange={e => setDetails({...details, message: e.target.value})}></textarea>
       
     </div>
   </div>
   <div >
-    <div >
-      <button className="shadow bg-blue-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-        Send
-      </button>
+    <div>
+    <input className="bg-black border-2 border-black text-white font-bold py-2 px-4 mt-5  rounded w-full"
+                               type="submit"
+                               value="SEND"
+                            
+                        />
     </div>
    
   </div>
 </form>
+    return (
+      <>
+        {content}
+      </>
+        
     )
 }

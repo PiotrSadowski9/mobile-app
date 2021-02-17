@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 export default function Register({Login, setLogin}) {
@@ -7,7 +7,10 @@ export default function Register({Login, setLogin}) {
     const submitHandler = e => {
         e.preventDefault();
         setLogin({...Login, name: details.name,email:details.email,password:details.password});
-        console.log(Login)
+        console.log(Login);
+        setTimeout(() => {
+            alert("Thanks for registration. Now you can log in")
+          }, 3000);
     
         
     
