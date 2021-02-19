@@ -16,7 +16,7 @@ export default function Contact() {
   content = <form className="w-full h-screen" onSubmit={submitHandler}>
   <div className="flex flex-wrap">
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
         First Name
       </label>
       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" 
@@ -26,7 +26,7 @@ export default function Contact() {
       
     </div>
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-last-name">
         Last Name
       </label>
       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" 
@@ -37,7 +37,7 @@ export default function Contact() {
   </div>
   <div className="flex flex-wrap ">
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
         E-mail
       </label>
       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" 
@@ -50,7 +50,7 @@ export default function Contact() {
   </div>
   <div className="flex flex-wrap ">
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
         Message
       </label>
       <textarea className=" no-resize shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" 
