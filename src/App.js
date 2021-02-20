@@ -28,7 +28,7 @@ function App() {
       
       <Router>
         <Header user={user.logged}/>
-        <div className={'mt-14'}>
+        <div className={'mt-14 mb-40'}>
           <Switch>
             <Route exact path='/'>
               <Home/>
