@@ -48,7 +48,12 @@ export default function Navigation({user,setUser}) {
         <nav>
             <span className={'text-xl'}>
                 
-                
+                <Link to ='/cart'>
+                    <FontAwesomeIcon 
+                        icon={faShoppingCart}
+                        className={"mr-5"}
+                        />
+                </Link>
                 <Link to ='/login'>
                     {loginIcon}
                 </Link>

@@ -4,13 +4,30 @@ import Loader from '../Components/Loader';
 import useAxiosGet from '../Hooks/HttpRequests';
 import {Link} from 'react-router-dom'
 
-export default function Product() {
+export default function Product({user, setUser}) {
     const {id} = useParams()
     const url = `https://601bd2cf1a9c22001705fb28.mockapi.io/api/v1/products/${id}`;
     
     let product = useAxiosGet(url)
 
-    let content = null
+    let content = null;
+
+    
+
+    
+    const addToCart = () => { //Adding product to cart
+        
+       
+        let newUser = user.concat(product.data.name)
+        console.log(newUser)
+        setUser({...user,cart:newUser})
+        
+        
+        
+        
+    }
+
+
 
     
     if(product.loading){
@@ -36,6 +53,11 @@ export default function Product() {
                 <Link to={`/products`} className={'bg-blue-500 text-white p-2 mt-4 flex justify-center rounded-t'}>
                     Wróć
                 </Link>
+                <button className="bg-blue-500 text-white p-2 mt-4 flex justify-center rounded-t w-full" 
+                        type="button"
+                        onClick={addToCart}>
+                                Dodaj do koszyka
+                </button>
             </div>
     }
 

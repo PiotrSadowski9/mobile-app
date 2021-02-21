@@ -13,7 +13,8 @@ import Product from './Views/Product';
 import Login from './Views/Login';
 import Register from './Views/Register'
 import React, {useState} from 'react';
-import Products from './Views/Products'
+import Products from './Views/Products';
+import Cart from './Views/Cart'
 
 
 
@@ -21,7 +22,7 @@ function App() {
 
   
 
-  const [user, setUser] = useState({name:'',email:'',password:'',logged:false});
+  const [user, setUser] = useState({name:'',email:'',password:'',logged:false,cart:["peach","apple"]});
   
 
   return (
@@ -44,7 +45,10 @@ function App() {
               <Products/>
             </Route>
             <Route path ='/products/:id'>
-              <Product/>
+              <Product user={user.cart} setUser={setUser}/>
+            </Route>
+            <Route path ='/cart'>
+              <Cart user={user.cart} setUser={setUser}/>
             </Route>
             <Route path = '/login'>
               <Login user={user} setUser={setUser} />
