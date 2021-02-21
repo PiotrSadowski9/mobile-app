@@ -13,6 +13,7 @@ import Product from './Views/Product';
 import Login from './Views/Login';
 import Register from './Views/Register'
 import React, {useState} from 'react';
+import Products from './Views/Products'
 
 
 
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route path ='/contact'>
               <Contact/>
+            </Route>
+            <Route exact path='/products'>
+              <Products/>
             </Route>
             <Route path ='/products/:id'>
               <Product/>

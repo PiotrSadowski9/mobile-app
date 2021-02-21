@@ -60,7 +60,7 @@ export default function Register({Login, setLogin}) {
                                />
                        
                         
-                        <input className="bg-black border-2 border-black text-white font-bold py-2 px-4 mt-5 rounded w-full"
+                        <input className="bg-black border-2 border-black text-white font-bold py-2 px-4  mt-5 rounded w-full"
                                type="submit"
                                value="Register"
                             
