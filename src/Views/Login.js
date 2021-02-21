@@ -25,7 +25,8 @@ export default function Login({user,setUser}) {
    
     return (
         <>
-        <form onSubmit={submitHandler}>
+        <form   className={"h-full flex flex-col"}
+                onSubmit={submitHandler}>
                     <div className="mb-4 p-5">
                             <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="username">
                                 Nazwa uzytkownika
@@ -62,9 +63,9 @@ export default function Login({user,setUser}) {
                     </div>
                     
                     
-                    <div className={'bg-gray-300  p-5 p-10'}>
+                    <div className={'bg-gray-200 p-4'}>
                         
-                        <p className={'underline p-3 text-center'}>Jesteś tu pierwszy raz?</p>
+                        <p className={'p-3 text-center pb-10'}>Jesteś tu pierwszy raz?</p>
                         <Link to ='/register'>
                             <button className="bg-gray-200 border-2 border-black text-black font-bold py-2 px-4 rounded w-full" 
                                     type="button">

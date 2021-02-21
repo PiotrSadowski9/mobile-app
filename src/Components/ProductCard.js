@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 export default function ProductCard(props) {
     return (
-        <div className={'border mb-4 rounded overflow-hidden'}>
+        <div className={'border mb-4 rounded overflow-hidden px-4 pb-4'}>
             <Link to={`/products/${props.product.id}`}>
                 <div style={{'backgroundImage': `url('${props.product.imageUrl}')`}} className={'w-full h-64 bg-blue bg-cover'}>
 
@@ -14,15 +14,16 @@ export default function ProductCard(props) {
                     <Link to={`/products/${props.product.id}`}>{props.product.name}</Link>
                 </h3>
                 <div className={'font-bold mb-3'}>
-                    ${props.product.price}
+                    {props.product.price} PLN
                 </div>
                 <div className={'mb-3'}>
                     {props.product.description}
                 </div>
                 <Link to={`/products/${props.product.id}`} className={'bg-blue-500 text-white p-2 flex justify-center'}>
-                    View more
+                    Pokaż więcej
                 </Link>
             </div>
         </div>
     )
 }
+

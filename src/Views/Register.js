@@ -46,7 +46,7 @@ export default function Register({Login, setLogin}) {
                                    />
                     </div>
                     
-                    <div className="mb-6">
+                    <div>
                         <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="password">
                             Hasło
                         </label>

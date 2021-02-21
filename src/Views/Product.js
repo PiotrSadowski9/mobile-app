@@ -33,8 +33,8 @@ export default function Product() {
                 <div>
                     {product.data.description}
                 </div>
-                <Link to={`/`} className={'bg-blue-500 text-white p-2 flex justify-center'}>
-                    Go back
+                <Link to={`/products`} className={'bg-blue-500 text-white p-2 flex justify-center'}>
+                    Wróć
                 </Link>
             </div>
     }
