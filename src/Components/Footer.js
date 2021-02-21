@@ -9,7 +9,7 @@ import shopLogo from './assets/shopLogo.png';
 
 export default function Footer() {
     return (
-        <footer className={'bg-gray-200 text-center text-xs p-3 absolute bottom-0 w-full'}>
+        <footer className={'bg-gray-300 text-center text-xs p-3 absolute bottom-0 w-full'}>
             
             <ul className={"flex justify-center my-3 "}>
                 <li><img className={'h-5 px-4'} alt="Facebook logo" src={FbLogo}/></li>
@@ -21,7 +21,7 @@ export default function Footer() {
              Lorem & Ipsum. L&I oferuje produkty najwyższej jakości, 
              które są przyjazna dla ludzi i środowiska.
             </p>
-            <p className={"py-3"}>POLSKA|PLN</p>
+            <p className={"py-3 text-gray-500"}>POLSKA|PLN</p>
         </footer>
     )
 }

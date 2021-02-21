@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBars,faUser} from '@fortawesome/free-solid-svg-icons';
+import {faBars,faUser,faSignOutAlt} from '@fortawesome/free-solid-svg-icons';
 import {useTransition, animated} from 'react-spring';
 import NavigationMenu from './NavigationMenu';
 import {Link} from "react-router-dom";
@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 
 
 
-export default function Navigation(props) {
+export default function Navigation({user,setUser}) {
    
     
     const [showMenu, setShowMenu] = useState(false);
@@ -24,15 +24,22 @@ export default function Navigation(props) {
         leave: { opacity: 0, transform: 'translateX(-100%)' },
         })
     let loginIcon;
-    if(props.user){
+    let signOutIcon;
+    if(user){
+        signOutIcon = <FontAwesomeIcon 
+                            icon={faSignOutAlt}
+                            className={"mr-5"}
+                            onClick={() => setUser({...user,logged:false})}
+                            />;
         loginIcon = <FontAwesomeIcon
         icon={faUser}
-        className={'mr-10 text-green-600'}/>
+        className={'mr-5 text-green-600'}/>
+        
     }
-    if(!props.user){
+    if(!user){
         loginIcon = <FontAwesomeIcon
                         icon={faUser}
-                        className={'mr-10 text-red-600'}/>
+                        className={'mr-5 text-red-600'}/>
     }
     
    
@@ -45,6 +52,7 @@ export default function Navigation(props) {
                 <Link to ='/login'>
                     {loginIcon}
                 </Link>
+                {signOutIcon}
                 <FontAwesomeIcon 
                     icon={faBars}
                     onClick={() => setShowMenu(!showMenu)}

@@ -10,7 +10,7 @@ export default function Register({Login, setLogin}) {
         console.log(Login);
         setTimeout(() => {
             alert("Thanks for registration. Now you can log in")
-          }, 3000);
+          }, 1000);
     
         
     
@@ -22,13 +22,13 @@ export default function Register({Login, setLogin}) {
               onSubmit={submitHandler} >
                     <div className="mb-4">
                             <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="username">
-                                Username
+                                Nazwa użytkownika
                             </label>
                             <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" 
                                     id="username" 
                                     type="text"
                                     name='name' 
-                                    placeholder="Username"
+                                    placeholder="Nazwa uzytkownika"
                                     onChange={e => setDetails({...details, name: e.target.value})}
                                     value={details.name}
                                     />
@@ -48,7 +48,7 @@ export default function Register({Login, setLogin}) {
                     
                     <div className="mb-6">
                         <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="password">
-                            Password
+                            Hasło
                         </label>
                         <input className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" 
                                id="password" 
@@ -62,7 +62,7 @@ export default function Register({Login, setLogin}) {
                         
                         <input className="bg-black border-2 border-black text-white font-bold py-2 px-4  mt-5 rounded w-full"
                                type="submit"
-                               value="Register"
+                               value="Zajerestruj"
                             
                         />
                         

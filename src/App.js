@@ -28,7 +28,7 @@ function App() {
     <div className="relative pb-10 min-h-screen">
       
       <Router>
-        <Header user={user.logged}/>
+        <Header user={user.logged} setUser={setUser}/>
         <div className={'mt-14 mb-40'}>
           <Switch>
             <Route exact path='/'>
