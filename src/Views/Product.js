@@ -22,18 +22,18 @@ export default function Product() {
 
     if(product.data){
         content = 
-            <div>
+            <div className={' mb-4 rounded overflow-hidden px-4 pb-4'}>
                 <h1 className={'text-2xl font-bold mb-3'}>{product.data.name}</h1>
                 <div className={'w-350 h-256'}>
                     <img  src={product.data.imageUrl} alt={product.data.name}/>
                 </div>
-                <div className={'font-bold text-xl mb-3'}>
+                <div className={'font-bold text-xl my-3'}>
                     ${product.data.price}
                 </div>
                 <div>
                     {product.data.description}
                 </div>
-                <Link to={`/products`} className={'bg-blue-500 text-white p-2 flex justify-center'}>
+                <Link to={`/products`} className={'bg-blue-500 text-white p-2 mt-4 flex justify-center rounded-t'}>
                     Wróć
                 </Link>
             </div>

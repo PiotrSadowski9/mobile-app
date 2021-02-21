@@ -42,7 +42,7 @@ export default function Products() {
 
     return (
         <div>
-            <h1 className={'fond-bold text-2xl'}>Best Sellers</h1>
+            <h1 className={'fond-bold text-2xl p-3'}>Nasza oferta</h1>
             {content}
             {pagination}
         </div>

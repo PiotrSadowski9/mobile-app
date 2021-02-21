@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBars,faUser,faSignOutAlt} from '@fortawesome/free-solid-svg-icons';
+import {faBars,faUser,faSignOutAlt, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import {useTransition, animated} from 'react-spring';
 import NavigationMenu from './NavigationMenu';
 import {Link} from "react-router-dom";
