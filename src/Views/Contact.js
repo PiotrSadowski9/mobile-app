@@ -82,7 +82,6 @@ export default function Contact() {
         </p>
         <div className={"p-3"}>
           <img className={'h-6 mb-4'} alt="shop logo" src={shopLogo}/>
-          <h3 className={"text-xl mt-5"}>.SHOP</h3>
           <p className={"text-xs mt-4"}>
             SKLP S.A <br/>
             Ul. Lorem Impsum 32/44 <br/>
