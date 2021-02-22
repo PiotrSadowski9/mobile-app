@@ -1,7 +1,7 @@
 
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import Loader from '../Components/Loader'
+// import Loader from '../Components/Loader'
 
 
 export default function Login({user,setUser}) {

@@ -18,8 +18,8 @@ export default function Product({user, setUser}) {
     const addToCart = () => { //Adding product to cart
         
        
-        let newUser = user.concat(product.data.name)
-        console.log(newUser)
+        let newUser = user.concat({name:product.data.name,price:Math.round(product.data.price)})
+        
         setUser({...user,cart:newUser})
         
         
@@ -45,7 +45,7 @@ export default function Product({user, setUser}) {
                     <img  src={product.data.imageUrl} alt={product.data.name}/>
                 </div>
                 <div className={'font-bold text-xl my-3'}>
-                    ${product.data.price}
+                    {product.data.price} PLN
                 </div>
                 <div>
                     {product.data.description}

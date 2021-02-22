@@ -3,7 +3,7 @@ import FbLogo from './assets/fbLogo.png';
 import TTLogo from './assets/TTLogo.png';
 import INLogo from './assets/INLogo.png';
 import YTLogo from './assets/YTLogo.png';
-import shopLogo from './assets/shopLogo.png';
+
 
 
 

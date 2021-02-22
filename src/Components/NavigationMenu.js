@@ -9,6 +9,7 @@ export default function NavigationMenu(props) {
                     <ul>
                         <li><Link to ='/login' className={'text-grey-500 py-3 border-t border-b block'} onClick={props.closeMenu}>Login</Link></li>
                         <li><Link to ='/' className={'text-grey-500 py-3 border-t border-b block'} onClick={props.closeMenu}>Home</Link></li>
+                        <li><Link to ='/cart' className={'text-grey-500 py-3 border-t border-b block'} onClick={props.closeMenu}>Cart</Link></li>
                         <li><Link to ='/products' className={'text-grey-500 py-3 border-t border-b block'} onClick={props.closeMenu}>Products</Link></li>
                         <li><Link to ='/about' className={'text-grey-500 py-3 border-b block'} onClick={props.closeMenu}>About Us</Link></li>
                         <li><Link to ='/contact' className={'text-grey-500 py-3 border-b block'} onClick={props.closeMenu}>Contact Us</Link></li>
