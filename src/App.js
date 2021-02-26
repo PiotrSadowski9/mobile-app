@@ -22,7 +22,7 @@ function App() {
 
   
 
-  const [user, setUser] = useState({name:'',email:'',password:'',logged:false,cart:[{name:"peach",price:343},{name:"apple",price:444}]});
+  const [user, setUser] = useState({name:'',email:'',password:'',logged:false,cart:[{name:"peach",price:343},{name:"apple",price:444},{name:"orange",price:123},{name:"banana",price:657}]});
   
 
   return (
