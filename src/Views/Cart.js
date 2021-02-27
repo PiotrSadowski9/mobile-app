@@ -40,9 +40,9 @@ export default function Cart({user, setUser}) {
                     <table className="min-w-full bg-white">
                     <thead className="bg-gray-800 text-white">
                         <tr>
-                        <th className="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Name</th>
-                        <th className="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Price</th>
-                        <th className="text-left py-3 px-4 uppercase font-semibold text-sm">Delete</th>
+                        <th className="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Nazwa</th>
+                        <th className="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Cena</th>
+                        <th className="text-left py-3 px-4 uppercase font-semibold text-sm">Usuń</th>
                         
                         </tr>
                     </thead>

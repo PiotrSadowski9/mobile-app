@@ -17,7 +17,7 @@ export default function Login({user,setUser}) {
          
         } else {
             setUser({...user,logged:false})
-            console.log("Incorrect Login or password")
+            console.log("Niepoprawny login lub hasło")
         }
      
     

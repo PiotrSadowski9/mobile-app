@@ -9,7 +9,7 @@ export default function Register({Login, setLogin}) {
         setLogin({...Login, name: details.name,email:details.email,password:details.password});
         console.log(Login);
         setTimeout(() => {
-            alert("Thanks for registration. Now you can log in")
+            alert("Dziekujemy za rejestrację. Możesz się już zalogować")
           }, 1000);
     
         
