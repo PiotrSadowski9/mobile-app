@@ -35,7 +35,7 @@ export default function Cart({user, setUser}) {
 
 
     return (<>
-            <div className="md:px-32 py-8 w-full">
+            <div className="md:px-32 p-8 w-full">
                 <div className="shadow overflow-hidden rounded border-b border-gray-200">
                     <table className="min-w-full bg-white">
                     <thead className="bg-gray-800 text-white">
@@ -53,7 +53,16 @@ export default function Cart({user, setUser}) {
                     </table>
                 </div>
             </div>
-            <h1>{sum}</h1>
+            <div class="ml-16">
+                    <div class="flex items-center">
+                        <div class="flex flex-col justify-center">
+                            <div class="text-lg">{sum} PLN</div>
+                            <div class="text-sm text-gray-400">Suma</div>
+                        </div>
+                        <button type="button" class="ml-20 focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg">Kup teraz</button>
+                    </div>
+                
+            </div>
 </>
     )
 }

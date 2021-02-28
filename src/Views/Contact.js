@@ -11,7 +11,7 @@ export default function Contact() {
     content = <Loader/>
     
     setTimeout(() => {
-      alert("Thanks for your message!")
+      alert("Dziekujemy za wiadomość!")
     }, 1000);
  }
   content = <form className="w-full" onSubmit={submitHandler}>

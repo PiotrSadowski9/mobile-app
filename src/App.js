@@ -26,6 +26,7 @@ function App() {
   
 
   return (
+    
     <div className="relative pb-10 min-h-screen">
       
       <Router>
@@ -62,6 +63,7 @@ function App() {
       </Router>
       
     </div>
+    
   );
 }
 
