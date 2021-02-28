@@ -11,7 +11,7 @@ export default function Product({user, setUser}) {
     let product = useAxiosGet(url)
 
     let content = null;
-    console.log(product.data)
+    
 
     
 

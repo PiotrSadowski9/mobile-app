@@ -8,12 +8,14 @@ export default function Cart({user, setUser}) {
         setUser({...user,cart:user.filter(e => e.name !== name)}); //removing product from cart in state
         console.log(user) 
      }
+     let sum;
+     if(user){
 
-     const sum = user.reduce(function(prev,cur){
+     sum = user.reduce(function(prev,cur){
          return prev + cur.price
      },0);
      console.log(sum)
-
+     }
     
     
     let products = user.map((e,index) => {
